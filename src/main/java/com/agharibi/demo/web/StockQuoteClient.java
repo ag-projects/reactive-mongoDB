@@ -21,7 +21,7 @@ public class StockQuoteClient {
 
     public Flux<Quote> getQutoeStream() {
 
-        String url = "http://" + host + port;
+        String url = "http://" + host + ":" + port;
         log.debug("URL set is: " + url);
         return WebClient.builder()
                 .baseUrl(url)
